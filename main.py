@@ -78,8 +78,8 @@ class window():
         WIN.mainloop()
         
     def getInput():
-        CO_EF  = [CO_IN_1.get(), CO_IN_2.get(), CO_IN_3.get()]
-        EQ.append(f"{CO_IN_1.get()}x^2 {CO_IN_2.get()}x {CO_IN_3.get()}")
+        CO_EF  = [int(CO_IN_1.get()), int(CO_IN_2.get()), int(CO_IN_3.get())]
+        EQ.append((f"{CO_EF[0]:+}x**2 {CO_EF[1]:+}x {CO_EF[2]:+}"))
         SOL.append(main.checkComplex(main.estimateRoots(CO_EF)))
         for i in range(len(EQ)):
             EQ_ = Label(WIN, text=f"{EQ[i]}, Roots: {SOL[i]}")
